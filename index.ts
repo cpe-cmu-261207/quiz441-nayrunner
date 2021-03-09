@@ -23,6 +23,7 @@ app.post('/login',
     const { username, password } = req.body
     // Use username and password to create token.
 
+
     return res.status(200).json({
       message: 'Login succesfully',
     })
@@ -30,7 +31,7 @@ app.post('/login',
 
 app.post('/register',
   (req, res) => {
-
+    
     const { username, password, firstname, lastname, balance } = req.body
   })
 
