@@ -46,7 +46,8 @@ app.post('/login',
   })
 
 app.post('/register',
-  (req, res) => 
+  (req, res) => {
+
 
     const { username, password, firstname, lastname, balance } = req.body
   })
@@ -55,8 +56,8 @@ app.get('/balance',
   (req, res) => {
     const token = req.query.token as string
     try {
-      const { username } = jwt.verify(token, SECRET) as JWTPayload
-  
+      const { username } = jwt.verify(token, SECRET) as JWTPayload 
+
     }
     catch (e) {
       //response in case of invalid token
